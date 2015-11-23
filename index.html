@@ -1,36 +1,15 @@
 <html>
 <head>
 <script type="text/javascript" src="jquery-2.1.4.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){
-  $("p").click(function(){
-    $(this).hide();
-  });
-  $("#fb").click(function(){
-    debugger;
-    var sqlStr = $("#sqlin").val();
-    // var reg = new RegExp("\((?<grp>(?>[^()]|\((?<open>)|\)(?<-open>))*(?(open)(?!)))\);");
-    var reg = new RegExp("Insert","i");
-    if(!reg.test(sqlStr)){
-      alert("please entrue the sql crrect!");
-    }
-    reg=new RegExp(/(\([^\(\)]*\))/);
-    arr = reg.exec(sqlStr);
-    var property = arr[0];
-    var value = arr[1];
-    alert(property);
-    alert(value);
-    
-  });
-});
-</script>
+<script type="text/javascript" src="main.js"></script>
+<link rel="stylesheet" href="css.css"></link>
 </head>
 
 <body>
 <h1> Format the SQL</h1>
-<p>If you click on me, I will disappear.</p>
 <input id='sqlin' type='text'>
 <input id='fb' type='button' value='format'>
+<textarea id='sqlout'></textarea>
 </body>
 
 </html>

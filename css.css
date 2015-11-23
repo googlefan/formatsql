@@ -1,0 +1,11 @@
+textarea#sqlin {
+    width: 1000px;
+    height: 100px;
+}
+textarea#sqlout {
+    width: 1000px;
+    height: 100px;
+}
+input#sqlin {
+    width: 1000px;
+}
